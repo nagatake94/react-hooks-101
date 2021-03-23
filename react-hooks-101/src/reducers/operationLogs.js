@@ -3,19 +3,19 @@ import {
     DELETE_ALL_ORERATION_LOGS
  } from "../actions";
 
- const operaitonLogs = (state = [], action) => {
+ const operationLogs = (state = [], action) => {
     switch (action.type){
         case ADD_ORERATION_LOG:
-            const operaitonLog= {
+            const operationLog= {
                 description: action.description,
                 operatedAt: action.operatedAt
             }
-            return [ operaitonLog ,...state];
+            return [ operationLog , ...state]
         case DELETE_ALL_ORERATION_LOGS:
-            return [];
+            return []
         default:
             return state;
     }
  }
 
- export default operaitonLogs;
+ export default operationLogs;
